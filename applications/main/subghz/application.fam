@@ -1,0 +1,40 @@
+App(
+    appid="subghz",
+    name="SubGHz",
+    apptype=FlipperAppType.APP,
+    targets=["f7"],
+    cdefines=["APP_SUBGHZ"],
+    entry_point="subghz_app",
+    requires=[
+        "gui",
+        "cli",
+        "dialogs",
+    ],
+    provides=[
+        "subghz_start",
+        "subghz_load_extended_settings",
+    ],
+    icon="A_Sub1ghz_14",
+    stack_size=3 * 1024,
+    order=10,
+    fap_libs=["hwdrivers"],
+    fap_icon="icon.png",
+    fap_category="Sub-GHz",
+)
+
+App(
+    appid="subghz_start",
+    targets=["f7"],
+    apptype=FlipperAppType.STARTUP,
+    entry_point="subghz_on_system_start",
+    requires=["subghz"],
+    order=40,
+)
+
+App(
+    appid="subghz_load_extended_settings",
+    apptype=FlipperAppType.STARTUP,
+    entry_point="subghz_extended_freq",
+    requires=["storage", "subghz"],
+    order=650,
+)
