@@ -1,0 +1,6 @@
+[submodule "applications/external/totp/lib/wolfssl~HEAD"]
+	path = applications/external/totp/lib/wolfssl~HEAD
+	url = https://github.com/robbyck/myflippers1.git
+[submodule "applications/external/totp/lib/wolfssl"]
+	path = applications/external/totp/lib/wolfssl
+	url = https://github.com/robbyck/myflippers1.git
