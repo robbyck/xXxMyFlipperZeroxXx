@@ -45,3 +45,6 @@
 	path = applications/main/subghz_remote
 	url = https://github.com/DarkFlippers/unleashed-firmware
 
+[submodule "applications/external/totp/lib/wolfssl"]
+	path = applications/external/totp/lib/wolfssl
+	url = https://github.com/RogueMaster/flipperzero-firmware-wPlugins/tree/420
